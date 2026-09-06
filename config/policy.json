@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "approval_required_for": [
+    "external_message_send", "public_publish", "financial_transfer", "refund",
+    "tax_or_official_filing", "permission_change", "data_deletion", "contractual_commitment"
+  ],
+  "always_escalate": ["security_incident", "legal_claim", "medical_or_safety_issue", "privacy_breach", "threat_or_abuse"],
+  "metrics": {
+    "business": ["revenue", "qualified_pipeline", "conversion_rate", "gross_margin", "retention"],
+    "operating": ["cycle_time", "first_pass_acceptance", "rework_rate", "human_review_minutes", "cost_per_task", "escalation_rate"],
+    "quality": ["accuracy", "completeness", "unsupported_claim_rate", "missed_deadline_rate", "high_severity_incidents"]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "agents": [
+    {"id": "orchestrator", "name": "Founder Orchestrator", "skill": "weekly-business-review", "risk_level": "high"},
+    {"id": "research", "name": "Research Agent", "skill": "research-briefing", "risk_level": "medium"},
+    {"id": "sales", "name": "Sales Agent", "skill": "lead-qualification", "risk_level": "medium"},
+    {"id": "content", "name": "Content Agent", "skill": "content-repurposing", "risk_level": "medium"},
+    {"id": "delivery", "name": "Delivery Agent", "skill": "delivery-quality-assurance", "risk_level": "high"},
+    {"id": "operations", "name": "Operations Agent", "skill": "weekly-business-review", "risk_level": "medium"},
+    {"id": "finance", "name": "Finance Agent", "skill": "finance-review", "risk_level": "critical"},
+    {"id": "support", "name": "Customer Support Agent", "skill": "support-triage", "risk_level": "high"}
+  ]
+}

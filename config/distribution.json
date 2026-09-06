@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "mode": "dry_run",
+  "channels": {
+    "email": {"enabled": false, "approval_required": true},
+    "linkedin": {"enabled": false, "approval_required": true},
+    "x": {"enabled": false, "approval_required": true},
+    "website": {"enabled": false, "approval_required": true},
+    "newsletter": {"enabled": false, "approval_required": true}
+  },
+  "queue_states": ["draft", "needs_review", "approved", "scheduled", "published", "failed", "rejected"],
+  "rules": [
+    "Never publish content that has not passed quality checks.",
+    "Never send a message to a real person without an explicit approval record.",
+    "Do not claim a result, partnership, customer, or source that is not evidenced.",
+    "Record the content version, channel, approver, timestamp, and outcome."
+  ]
+}

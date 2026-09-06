@@ -1,0 +1,41 @@
+{
+  "version": "1.0",
+  "workflows": [
+    {
+      "id": "weekly-review",
+      "name": "Weekly Business Review",
+      "agent": "orchestrator",
+      "inputs": ["period", "revenue", "pipeline", "delivery", "costs", "customer_feedback"],
+      "stages": ["collect", "analyze", "prioritize", "request_approval"],
+      "output": "ranked priorities, risks, experiments, and decisions",
+      "approval_required": true
+    },
+    {
+      "id": "content-distribution",
+      "name": "Content to Distribution Queue",
+      "agent": "content",
+      "inputs": ["source_material", "audience", "channels", "objective", "voice"],
+      "stages": ["brief", "draft", "adapt", "quality_check", "request_approval", "queue"],
+      "output": "channel-specific content package and distribution queue",
+      "approval_required": true
+    },
+    {
+      "id": "lead-to-outreach",
+      "name": "Lead Qualification to Outreach",
+      "agent": "sales",
+      "inputs": ["prospects", "ideal_customer_profile", "offer", "proof"],
+      "stages": ["qualify", "score", "draft", "request_approval", "queue"],
+      "output": "qualified lead table and approved outreach queue",
+      "approval_required": true
+    },
+    {
+      "id": "client-delivery",
+      "name": "Client Delivery with Quality Gate",
+      "agent": "delivery",
+      "inputs": ["client_brief", "scope", "source_material", "deadline"],
+      "stages": ["plan", "produce", "review", "request_approval", "deliver"],
+      "output": "client-ready deliverable and QA report",
+      "approval_required": true
+    }
+  ]
+}

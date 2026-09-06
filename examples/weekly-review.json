@@ -1,0 +1,8 @@
+{
+  "period": "2026-W36",
+  "revenue": "Add approved revenue data here",
+  "pipeline": "Add qualified pipeline data here",
+  "delivery": "Add delivery status here",
+  "costs": "Add approved cost data here",
+  "customer_feedback": "Add verified customer feedback here"
+}
