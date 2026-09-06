@@ -1,0 +1,29 @@
+flowchart LR
+    I[Business goal or incoming work] --> O[HERMES Orchestrator]
+    O --> Q{Task queue}
+    Q --> R[Research Agent]
+    Q --> S[Sales Agent]
+    Q --> C[Content Agent]
+    Q --> D[Delivery Agent]
+    Q --> F[Finance Agent]
+    Q --> U[Support Agent]
+    R --> E[Evaluator]
+    S --> E
+    C --> E
+    D --> E
+    F --> E
+    U --> E
+    E --> G{Risk and quality gate}
+    G -->|Low risk / internal| L[Log checkpoint]
+    G -->|External or consequential| H[Human approval]
+    H --> L
+    L --> N{Queue empty?}
+    N -->|No| Q
+    N -->|Yes| T[Weekly operating report]
+
+    classDef core fill:#0b1f3a,stroke:#20e0d0,color:#ffffff,stroke-width:2px;
+    classDef agent fill:#102e56,stroke:#d6a63a,color:#ffffff;
+    classDef gate fill:#3a2810,stroke:#f0c75e,color:#ffffff,stroke-width:2px;
+    class O,E,L,T core;
+    class R,S,C,D,F,U agent;
+    class G,H gate;

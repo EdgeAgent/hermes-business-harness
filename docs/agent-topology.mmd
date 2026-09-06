@@ -1,0 +1,19 @@
+graph TD
+    H[HERMES Coordinator]
+    H --> R[Research]
+    H --> S[Sales]
+    H --> C[Content]
+    H --> D[Delivery]
+    H --> O[Operations]
+    H --> F[Finance]
+    H --> U[Support]
+    R --> M[(Shared Memory)]
+    S --> M
+    C --> M
+    D --> M
+    O --> M
+    F --> M
+    U --> M
+    M --> E[Evaluator]
+    E --> A[Approval Queue]
+    A --> X[Distribution / Delivery]
